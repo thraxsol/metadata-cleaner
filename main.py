@@ -10,7 +10,7 @@ from PySide6.QtWidgets import (
     QSplitter
 )
 from PySide6.QtCore import Qt, QPropertyAnimation, QRect, QSize
-from PySide6.QtGui import QPixmap
+from PySide6.QtGui import QPixmap, QIcon
 
 from metadata_cleaner import (
     clean_file, get_file_type,
@@ -387,6 +387,7 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
 
+        self.setWindowIcon(QIcon("assets/icons/icon.ico"))
         self.setWindowTitle("Metadata Cleaner for Windows")
         self.resize(1000, 650)
 
